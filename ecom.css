@@ -75,7 +75,7 @@ div.slideshow {
     display: none;
     z-index: -1;
     position: relative;
-    height: 500px;    
+    height: 500px;
 }
 .slide img {
     height:100%;
@@ -112,7 +112,7 @@ img.dot:hover, img#active{
     opacity: 1;
 }
 .dot {
-    width:200px;
+    width:150px;
     height: 100px;
     object-fit: fill;
     opacity: 0.6;
@@ -132,7 +132,8 @@ ul.imgGallery::after{
     width: 350px;
 }
 ul.imgGallery li {
-    width: 350px;height: 300px;
+    width: 350px;
+    height: 300px;
     position: relative;
 }
 ul.imgGallery li img {

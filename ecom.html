@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>foodie</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="ecom.css"/>   
+        <link rel="icon" type="image/x-icon" href="favicon.ico">
+    </head>
+    <body>
+        <div class="topnav">
+            <div class="pgname">
+                foodie
+            </div>            
+            <div class="menu">
+                <ul>
+                    <li><a href="#">HOME</a></li>
+                    <li class="dropdown">
+                        <a  href="#">MENU</a>
+                        <div class="dropdown-content">
+                            <a href="#">APPETIZERS</a>
+                            <a href="#">CHICKEN</a>
+                            <a href="#">SEAFOOD</a>
+                            <a href="#">VEGETARIAN</a>
+                            <a href="#">COMBO MEALS</a>
+                            <a href="#">DESSERTS</a>
+                        </div>
+                    </li>
+                    <li><a href="#">DEALS</a></li>
+                    <li><a href="#">CONTACT US</a></li>
+                    <li><a href="#">ABOUT US</a></li>                    
+                </ul>
+            </div>
+            <div class="search">
+                <form action="action" >
+                    <input type="search" id="search" name="search" placeholder="Search">
+                </form>
+            </div>
+        </div>
+        <div class="slideshow">
+            <div class="slide">
+                <img   src="images/image1.jpg" alt="img1"/>
+            </div>
+            <div class="slide">
+                <img  src="images/image2.jpg" alt="img2"/>
+            </div>
+            <div class="slide">
+                <img   src="images/image3.jpg" alt="img3"/>
+            </div>
+            <div class="slide">
+                <img   src="images/image4.jpg" alt="img4"/>
+            </div>
+            <div class="slide">
+                <img   src="images/image5.jpg" alt="img5"/>
+            </div>
+            <div class="slide">
+                <img   src="images/image6.jpg" alt="img6"/>
+            </div>
+
+            <button class="rightarr" type="button" onclick="plusSlides(1)">&gt;|</button>
+            <button class="leftarr" type="button" onclick="plusSlides(-1)">|&lt;</button>
+
+            <div class="row">
+                <img  class="dot" src="images/image1.jpg" onclick="currentSlide(1)" alt="img1"/>
+                <img  class="dot" src="images/image2.jpg" onclick="currentSlide(2)" alt="img2"/>
+                <img  class="dot" src="images/image3.jpg" onclick="currentSlide(3)" alt="img3"/>
+                <img  class="dot" src="images/image4.jpg" onclick="currentSlide(4)" alt="img4"/>
+                <img  class="dot" src="images/image5.jpg" onclick="currentSlide(5)" alt="img5"/>
+                <img  class="dot" src="images/image6.jpg" onclick="currentSlide(6)" alt="img6"/>
+            </div>
+        </div>
+        <div >
+            <ul class="imgGallery">
+                <li>
+                    <img src="images/item1.jpg" alt="item1"/>
+                    <div class="itemText">APPETIZERS</div>                 
+                </li>            
+                <li>
+                    <img src="images/item2.jpg" alt="item2"/>
+                    <div class="itemText">CHICKEN</div>                
+                </li>            
+                <li>
+                    <img src="images/item3.jpg" alt="item3"/>
+                    <div class="itemText">SEAFOOD</div>                 
+                </li>            
+                <li>
+                    <img src="images/item4.jpg" alt="item4"/>
+                    <div class="itemText">VEGETARIAN</div>                
+                </li>                           
+                <li>
+                    <img src="images/item5.jpg" alt="item5"/>
+                    <div class="itemText">DESSERTS</div>               
+                </li>
+                <li>
+                    <img src="images/item5.jpg" alt="item5"/>
+                    <div class="itemText">COMBO MEALS</div>               
+                </li>
+            </ul>         
+        </div>
+        <div class="footer">
+            <div class="socialMedia">
+                <div class="sname">FOLLOW US:</div>
+                <div class="sicon">
+                    <a href="#"><img src="images/icons8-facebook-32.png" alt="facebook"/></a>
+                    <a href="#"><img src="images/icons8-twitterx-32.png" alt="twitter"/></a>
+                    <a href="#"><img src="images/icons8-instagram-32.png" alt="instagram"/></a>
+                    <a href="#"><img src="images/icons8-pinterest-32.png" alt="pinterest"/></a>
+                    <a href="#"><img src="images/icons8-whatsapp-32.png" alt="whatsapp"/></a>
+                </div>
+            </div>
+            <div class="fbody">
+                <div class="fmenu">
+                    <ul>
+                        <li class="fheading">Quick Links</li>
+                        <li><a href="#">About Us</a></li>                    
+                        <li><a href="#">Catering Services</a></li>
+                        <li><a href="#">Outlets</a></li>
+                        <li><a href="#">Sitemap</a></li>                    
+                    </ul>
+                </div>
+                <div class="fmenu">
+                    <ul>
+                        <li class="fheading">Contact Us</li>
+                        <li>14, First lane, Singapore</li>                    
+                        <li>(+65)123456</li>
+                        <li>sales@foodie.lk</li>                    
+                    </ul>
+                </div>
+                <div class="fmenu">
+                    <ul>
+                        <li class="fheading">Restaurant Opening Hours</li>
+                        <li>11:00 A.M. to 03:00 P.M.</li>                    
+                        <li>06:00 P.M. to 11:00 P.M.</li>       
+                    </ul>
+                </div>
+            </div> 
+        </div>
+
+        <script src="ecom.js"></script>  
+    </body>
+</html>

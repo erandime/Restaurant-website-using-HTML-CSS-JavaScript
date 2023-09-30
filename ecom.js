@@ -1,3 +1,4 @@
+//slideshow
 let slideIndex = 1;
 showSlides(slideIndex);
 
@@ -28,7 +29,31 @@ function showSlides(n) {
     slides[slideIndex - 1].style.display = "block";
     dots[slideIndex - 1].id = "active";
 }
+//show/hide  responsive menu bar 
+function showmenuR() {
+    var x = document.getElementById("menuR");
+    if (x.style.display === "none") {
+        x.style.display = "block";
+    } else {
+        x.style.display = "none";
+    }
+}
 
+//show/hide dropdown-content
+var dropdown = document.getElementsByClassName("dropdown");
+var i;
+
+for (i = 0; i < dropdown.length; i++) {
+    dropdown[i].addEventListener("click", function () {
+        this.classList.toggle("active");
+        var dropdownContent = this.nextElementSibling;
+        if (dropdownContent.style.display === "block") {
+            dropdownContent.style.display = "none";
+        } else {
+            dropdownContent.style.display = "block";
+        }
+    });
+}
 ///* Tried another method :)
 // 
 // function currentSlide(n) { 

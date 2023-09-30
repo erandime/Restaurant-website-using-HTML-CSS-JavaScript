@@ -13,23 +13,24 @@
                 foodie
             </div>            
             <div class="menu">
-                <ul>
-                    <li><a href="#">HOME</a></li>
-                    <li class="dropdown">
-                        <a  href="#">MENU</a>
-                        <div class="dropdown-content">
-                            <a href="#">APPETIZERS</a>
-                            <a href="#">CHICKEN</a>
-                            <a href="#">SEAFOOD</a>
-                            <a href="#">VEGETARIAN</a>
-                            <a href="#">COMBO MEALS</a>
-                            <a href="#">DESSERTS</a>
-                        </div>
-                    </li>
-                    <li><a href="#">DEALS</a></li>
-                    <li><a href="#">CONTACT US</a></li>
-                    <li><a href="#">ABOUT US</a></li>                    
-                </ul>
+                <a href="#">HOME</a>
+                <a  href="#" class="dropdown">MENU</a>
+                <div class="dropdown-content">
+                    <a href="#">APPETIZERS</a>
+                    <a href="#">CHICKEN</a>
+                    <a href="#">SEAFOOD</a>
+                    <a href="#">VEGETARIAN</a>
+                    <a href="#">COMBO MEALS</a>
+                    <a href="#">DESSERTS</a>
+                </div>
+                <a href="#">DEALS</a>
+                <a href="#">CONTACT US</a>
+                <a href="#">ABOUT US</a>
+            </div>
+            <div onclick="showmenuR()">
+                <div class="bar" ></div>
+                <div class="bar" ></div>
+                <div class="bar" ></div>
             </div>
             <div class="search">
                 <form action="action" >
@@ -37,6 +38,23 @@
                 </form>
             </div>
         </div>
+
+        <div id="menuR" class="menuR">
+            <a href="#">HOME</a>
+            <a  href="#" class="dropdown">MENU</a>
+            <div class="dropdown-content">
+                <a href="#">APPETIZERS</a>
+                <a href="#">CHICKEN</a>
+                <a href="#">SEAFOOD</a>
+                <a href="#">VEGETARIAN</a>
+                <a href="#">COMBO MEALS</a>
+                <a href="#">DESSERTS</a>
+            </div>
+            <a href="#">DEALS</a>
+            <a href="#">CONTACT US</a>
+            <a href="#">ABOUT US</a>
+        </div>
+
         <div class="slideshow">
             <div class="slide">
                 <img   src="images/image1.jpg" alt="img1"/>
@@ -69,7 +87,8 @@
                 <img  class="dot" src="images/image6.jpg" onclick="currentSlide(6)" alt="img6"/>
             </div>
         </div>
-        <div >
+
+        <div>
             <ul class="imgGallery">
                 <li>
                     <img src="images/item1.jpg" alt="item1"/>
@@ -97,6 +116,7 @@
                 </li>
             </ul>         
         </div>
+
         <div class="footer">
             <div class="socialMedia">
                 <div class="sname">FOLLOW US:</div>
@@ -134,6 +154,44 @@
                     </ul>
                 </div>
             </div> 
+        </div>
+        <div class ="footerRes">
+            <div class="fbodyRes">
+                <div class="fmenuR">
+                    <ul>
+                        <li class="fheading">Follow Us:</li>
+                        <li><a href="#"><img src="images/icons8-facebook-32.png" alt="facebook"/>Facebook</a></li>                    
+                        <li><a href="#"><img src="images/icons8-twitterx-32.png" alt="twitter"/>Twitter</a></li>
+                        <li><a href="#"><img src="images/icons8-instagram-32.png" alt="instagram"/>Instagram</a></li>
+                        <li><a href="#"><img src="images/icons8-pinterest-32.png" alt="pinterest"/>Pinterest</a></li> 
+                        <li><a href="#"><img src="images/icons8-whatsapp-32.png" alt="whatsapp"/>Whatsapp</a></li>
+                    </ul>
+                </div>
+                <div class="fmenuR">
+                    <ul>
+                        <li class="fheading">Quick Links</li>
+                        <li><a href="#">About Us</a></li>                    
+                        <li><a href="#">Catering Services</a></li>
+                        <li><a href="#">Outlets</a></li>
+                        <li><a href="#">Sitemap</a></li>                    
+                    </ul>
+                </div>
+                <div class="fmenuR">
+                    <ul>
+                        <li class="fheading">Contact Us</li>
+                        <li>14, First lane, Singapore</li>                    
+                        <li>(+65)123456</li>
+                        <li>sales@foodie.lk</li>                    
+                    </ul>
+                </div>
+                <div class="fmenuR">
+                    <ul>
+                        <li class="fheading">Restaurant Opening Hours</li>
+                        <li>11:00 A.M. to 03:00 P.M.</li>                    
+                        <li>06:00 P.M. to 11:00 P.M.</li>       
+                    </ul>
+                </div>
+            </div>
         </div>
 
         <script src="ecom.js"></script>  

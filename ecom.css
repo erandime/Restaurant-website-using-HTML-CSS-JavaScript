@@ -25,23 +25,11 @@ div.pgname {
 }
 div.menu {
     padding: 10px;
-}
-.search input[type=search] {/* type=text?*/
-    height: 30px;
-    width: 300px;
-    border:2px solid #ccc;
-    font-size: 15px;
-    background-image: url('images/search.png');
-    background-repeat: no-repeat;
-    background-position: top right;
-    background-color: #ffcccc;
-}
-.menu li{
-    list-style-type: none;
-    font-size: 20px;
-    display: inline-block;
+    display: flex;
+    flex-direction: row;
 }
 .menu a {
+    font-size: 20px;
     text-decoration: none;
     color: white;
     text-align: center;
@@ -54,13 +42,59 @@ div.menu {
 .menu .dropdown-content {
     display: none;
     position: absolute;
+    margin: 35px;
     background-color: #990033;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
     padding: 3px;
 }
-.menu .dropdown:hover .dropdown-content{
+
+@media screen and (max-width:600px){
+    .menu a{
+        display: none;
+    }
+    div.bar{
+        visibility: visible;
+    }
+}
+
+.bar {
+    visibility: hidden;
+    width: 35px;
+    height: 5px;
+    background-color: white;
+    margin: 6px 0;
+}
+.menuR {
+    background-color: #990033;
+    margin: 0;
+    display: none;
+}
+.menuR a {
+    font-size: 20px;
+    text-decoration: none;
+    color: white;
+    text-align: center;
     display: block;
+}
+.menuR a:hover {
+    color:#ffcccc;
+}
+.menuR .dropdown-content {
+    display: none;
+    margin: 0px;
+    background-color: #cc0033;
+    padding: 5px;
+}
+.search input[type=search] {/* type=text?*/
+    height: 30px;
+    width: 300px;
+    border:2px solid #ccc;
+    font-size: 15px;
+    background-image: url('images/icons8-search-32.png');
+    background-repeat: no-repeat;
+    background-position: top right;
+    background-color: #ffcccc;
 }
 /*slideshow*/
 div.slideshow {
@@ -206,7 +240,6 @@ div.fbody{
     list-style-type: none;
     font-size: 25px;
     color: white;
-    text-align: center;
     line-height: 30px;
     text-align: left;
 }
@@ -222,4 +255,43 @@ div.fbody{
 li.fheading {
     color: darkgray;
 }
-
+div.footerRes {
+    display: none;
+}
+div.fbodyRes {
+    display: flex;
+    flex-direction: column;
+    width:100%;
+    background-color: #990033;
+    gap:0;
+}
+.fmenuR li {
+    list-style-type: none;
+    font-size: 20px;
+    color: white;
+    text-align: center;
+    line-height: 25px;
+}
+.fmenuR a {
+    text-decoration: none;
+    color: white;
+    text-align: center;
+    display: block;
+}
+.fmenuR img {
+    vertical-align: top;
+}
+.fmenuR a:hover {
+    color:#ffcccc;
+}
+li.fheading {
+    color: darkgray;
+}
+@media screen and (max-width:600px){
+    div.footer {
+        display: none;
+    }
+    div.footerRes {
+        display: block;
+    }
+}

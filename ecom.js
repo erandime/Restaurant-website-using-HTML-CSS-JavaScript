@@ -54,6 +54,20 @@ for (i = 0; i < dropdown.length; i++) {
         }
     });
 }
+
+function handleSearch(event) {
+    event.preventDefault(); // Prevent the form from submitting
+
+    // Get the search query from the input field
+    const query = document.getElementById("searchInput").value;
+
+    // Display the search results directly on the page (vulnerable to XSS)
+    document.getElementById("searchResults").innerHTML = `
+        <h2>Search Results for: ${query}</h2>
+        <p>No results found for <strong>${query}</strong>.</p>
+    `;
+}
+
 ///* Tried another method :)
 // 
 // function currentSlide(n) { 

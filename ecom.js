@@ -1,4 +1,55 @@
-//slideshow
+document.addEventListener("DOMContentLoaded", () => {
+    const searchForm = document.querySelector(".search form");
+    const searchInput = document.querySelector("#search");
+    let searchResultsContainer = document.getElementById("search-results");
+
+    // Create the search-results container if it doesn't exist
+    if (!searchResultsContainer) {
+        searchResultsContainer = document.createElement("div");
+        searchResultsContainer.id = "search-results";
+        searchForm.parentNode.insertBefore(searchResultsContainer, searchForm.nextSibling);
+    }
+
+    searchForm.addEventListener("submit", (event) => {
+        event.preventDefault();
+
+        const query = searchInput.value.trim();
+        if (!query) {
+            searchResultsContainer.innerHTML = "<h2>Please enter a search term.</h2>";
+            return;
+        }
+
+        fetch(`search.php?search=${encodeURIComponent(query)}`)
+            .then((response) => response.text())
+            .then((data) => {
+                // Insert response into the DOM
+                searchResultsContainer.innerHTML = data;
+
+                // Manually execute any scripts in the response
+                const tempContainer = document.createElement("div");
+                tempContainer.innerHTML = data;
+                const scripts = tempContainer.querySelectorAll("script");
+
+                scripts.forEach((script) => {
+                    const newScript = document.createElement("script");
+                    if (script.src) {
+                        newScript.src = script.src; // For external scripts
+                        newScript.async = false; // Ensure execution order
+                    } else {
+                        newScript.textContent = script.textContent; // For inline scripts
+                    }
+                    document.body.appendChild(newScript); // Append and execute
+                });
+            })
+            .catch((error) => {
+                console.error("Error fetching search results:", error);
+                searchResultsContainer.innerHTML = "<h2>Failed to fetch search results.</h2>";
+            });
+    });
+});
+
+
+// Slideshow functionality
 let slideIndex = 1;
 showSlides(slideIndex);
 
@@ -29,9 +80,10 @@ function showSlides(n) {
     slides[slideIndex - 1].style.display = "block";
     dots[slideIndex - 1].id = "active";
 }
-//show/hide  responsive menu bar 
+
+// Show/hide responsive menu bar
 function showmenuR() {
-    var x = document.getElementById("menuR");
+    const x = document.getElementById("menuR");
     if (x.style.display === "none") {
         x.style.display = "block";
     } else {
@@ -39,14 +91,12 @@ function showmenuR() {
     }
 }
 
-//show/hide dropdown-content
-var dropdown = document.getElementsByClassName("dropdown");
-var i;
-
-for (i = 0; i < dropdown.length; i++) {
+// Show/hide dropdown-content
+const dropdown = document.getElementsByClassName("dropdown");
+for (let i = 0; i < dropdown.length; i++) {
     dropdown[i].addEventListener("click", function () {
         this.classList.toggle("active");
-        var dropdownContent = this.nextElementSibling;
+        const dropdownContent = this.nextElementSibling;
         if (dropdownContent.style.display === "block") {
             dropdownContent.style.display = "none";
         } else {
@@ -54,26 +104,3 @@ for (i = 0; i < dropdown.length; i++) {
         }
     });
 }
-
-function handleSearch(event) {
-    event.preventDefault(); // Prevent the form from submitting
-
-    // Get the search query from the input field
-    const query = document.getElementById("searchInput").value;
-
-    // Display the search results directly on the page (vulnerable to XSS)
-    document.getElementById("searchResults").innerHTML = `
-        <h2>Search Results for: ${query}</h2>
-        <p>No results found for <strong>${query}</strong>.</p>
-    `;
-}
-
-///* Tried another method :)
-// 
-// function currentSlide(n) { 
-// let x = "img:nth-child(" + n + ")";
-// document.querySelector(x).style.display = "block";
-// }
-// */
-
-
